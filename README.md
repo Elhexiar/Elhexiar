@@ -28,7 +28,15 @@ If you would like to know more about me you can follow the links below :
 
 ## Useful Links
 
-[My overall Skills](MySkills/MyOverallSkills.md)
+[My overall skills](MySkills/MyOverallSkills.md) 
+
+[My Unreal Engine skills](MySkills/UnrealSpecificSkills.md) 
+
+[My Unity Skills](MySkills/UnitySpecifSkills.md) 
+
+[French CV](MySkills/FrenchCV.md) 
+
+[English CV](MySkills/EnglishCV.md)
 
 <!--
 **Elhexiar/Elhexiar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
