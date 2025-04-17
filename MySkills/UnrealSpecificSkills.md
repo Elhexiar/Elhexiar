@@ -18,7 +18,7 @@ I will do my best to try and explain some of the systems I come up with for our 
 
 # RTS
 
-The Game Being an ***RTS*** had to have some though put into how we would handle the Units, furthermore our Game Designer Wanted a ***Squad System*** which needed to be taken into account
+The Game Being an ***RTS*** had to have some though put into how we would handle the Units, furthermore our Game Designers wanted a ***Squad System*** which needed to be taken into account
 
 ### Basic Hierarchy
 
@@ -34,4 +34,46 @@ If a Sergent Dies the closest unit becomes sergent.
 
 The **Units** Are spawned according to a **Formation** Struct given by the Squad Data Asset that contains all the informations to spawn the Units, including a 2D array of unit types and stats.
 
-<img width="291" alt="grid" src="https://github.com/user-attachments/assets/126fce57-8b8d-4cb6-9acf-f1356a5fa2d7" />
+<img width="350" alt="grid" src="https://github.com/user-attachments/assets/126fce57-8b8d-4cb6-9acf-f1356a5fa2d7" />
+
+Overall we have a lot of different systems that need to communicate with one another, we also have a lot of abstraction because of the Behaviour tree and Command Systems for both **Units** and **Squad**.
+To help minimise the effect on performance of the behaviour trees we try to use as much Events as possible and keep the overhead to a minimum.
+
+### Fog of War
+
+Our game also needed a Fog of War, wich we implemented with a RenderTarget onto wich Each Squad's sergent Draws a transparent circular brush periodically.
+Each sergent fires a Line trace on a Plane under the map to get the UV coordinates onto which to draw.
+This render Target is then sampled by a Decal Actor that covers the whole map.
+
+As for the Ennemy units they periodicaly query the Render Target at their corresponding UV coordinates to know if they are in the Fog of War.
+This allows us to hide Unit Meshes and animation as well as interactive behaviour if they are in the Fog Of War which allows us to gain a bit of performance.
+
+![FoW](https://github.com/user-attachments/assets/215993c9-cbdb-4621-9292-cb76fdcfb00c)
+
+(In Testing this system was also able to make an accurate Minimap, but this feature was cut from the game)
+
+
+
+
+## Optimisation 
+
+```
+void UAC_M_SquadUnitManager::StartAsyncTask()
+
+{
+	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [this]()
+	{
+		this->DoAsyncTask();
+
+		AsyncTask(ENamedThreads::GameThread, [this]()
+		{
+			GetWorld()->GetTimerManager().SetTimerForNextTick([this]()
+			{
+				this->OnAsyncCompleted();
+			});
+		});
+		
+	});
+}
+```
+
