@@ -41,6 +41,8 @@ To help minimise the effect on performance of the behaviour trees we try to use 
 
 ### Fog of War
 
+***//VIDEO OR GIF SHOWCASING THE FOW//***
+
 Our game also needed a Fog of War, wich we implemented with a RenderTarget onto wich Each Squad's sergent Draws a transparent circular brush periodically.
 Each sergent fires a Line trace on a Plane under the map to get the UV coordinates onto which to draw.
 This render Target is then sampled by a Decal Actor that covers the whole map.
@@ -52,6 +54,26 @@ This allows us to hide Unit Meshes and animation as well as interactive behaviou
 
 (In Testing this system was also able to make an accurate Minimap, but this feature was cut from the game)
 
+## Card System
+
+![Card](https://github.com/user-attachments/assets/5d2df46a-7566-4b99-9ff1-1abc68c6d55a)
+
+
+When I designed the card system, the precise role and behaviour of the cards had yet to be fully designed.
+I opted to make a the Card System very modular so that any changes could quicly be added, and to allow our GDs to churn out New Cards as fast as possible in later production and testing phases.
+
+The card would be containers for a few List of Card Effects that would trigger on certain Events ( OnDraw(), OnPlay(), OnDiscard etc... )
+By doing this our Game Designer would be able to make any effect happen at any corresponding Trigger.
+
+![CardBasicPresentation](https://github.com/user-attachments/assets/e4099d20-2b52-4961-984f-d2220f7fff98)
+![CardCorrelation](https://github.com/user-attachments/assets/3b386482-9d05-424d-8e6a-165bee03e4ca)
+
+Each **Card** is made of OnExecution(), OnFinish() and potentially OnTick(). But it also contains a Condtition() Method that is called first, first the Card goes through every Card Effect of a SelectedList and Comfirms every conditions. if all are comfirmed it then Executes its ExecutionMethods.
+
+![CardEffectCallOrder](https://github.com/user-attachments/assets/7822cb96-b927-42bf-8d3d-82926d88e267)
+
+This would prove quite useful for integrating, SFX/VFX.
+Combined with already made versatile utility functions it allowed out Designers and Tech Artist to experiment with the system and be more creative all while not needing to have a programmer involved since it would not affect the broader codebase.
 
 
 
