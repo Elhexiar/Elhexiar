@@ -50,7 +50,8 @@ This render Target is then sampled by a Decal Actor that covers the whole map.
 As for the Ennemy units they periodicaly query the Render Target at their corresponding UV coordinates to know if they are in the Fog of War.
 This allows us to hide Unit Meshes and animation as well as interactive behaviour if they are in the Fog Of War which allows us to gain a bit of performance.
 
-![FoW](https://github.com/user-attachments/assets/215993c9-cbdb-4621-9292-cb76fdcfb00c)
+<img width="600" alt="Fog of War Query Representation" src="https://github.com/user-attachments/assets/215993c9-cbdb-4621-9292-cb76fdcfb00c" />
+
 
 (In Testing this system was also able to make an accurate Minimap, but this feature was cut from the game)
 
@@ -65,8 +66,10 @@ I opted to make a the Card System very modular so that any changes could quicly 
 The card would be containers for a few List of Card Effects that would trigger on certain Events ( OnDraw(), OnPlay(), OnDiscard etc... )
 By doing this our Game Designer would be able to make any effect happen at any corresponding Trigger.
 
-![CardBasicPresentation](https://github.com/user-attachments/assets/e4099d20-2b52-4961-984f-d2220f7fff98)
-![CardCorrelation](https://github.com/user-attachments/assets/3b386482-9d05-424d-8e6a-165bee03e4ca)
+
+<img width="600" alt="Fog of War Query Representation" src="https://github.com/user-attachments/assets/e4099d20-2b52-4961-984f-d2220f7fff98" />
+<img width="400" alt="Fog of War Query Representation" src="https://github.com/user-attachments/assets/3b386482-9d05-424d-8e6a-165bee03e4ca" />
+
 
 Each **Card** is made of OnExecution(), OnFinish() and potentially OnTick(). But it also contains a Condtition() Method that is called first, first the Card goes through every Card Effect of a SelectedList and Comfirms every conditions. if all are comfirmed it then Executes its ExecutionMethods.
 
