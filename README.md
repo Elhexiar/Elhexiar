@@ -1,5 +1,7 @@
 # Welcome to my profile !
 
+![Banner](https://github.com/user-attachments/assets/100a186f-bab9-4cc1-bff1-03c566535aa3)
+
 ## I'm Mathis MIRIEL
 
 I'm a ***Game Programmer*** student finishing my third year at ESMA Rennes, France.
