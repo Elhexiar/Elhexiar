@@ -41,7 +41,10 @@ To help minimise the effect on performance of the behaviour trees we try to use 
 
 ### Fog of War
 
-***//VIDEO OR GIF SHOWCASING THE FOW//***
+
+[![Fog Of War Showcase Video](https://img.youtube.com/vi/UsWkpj-7U0M/0.jpg)](https://www.youtube.com/watch?v=UsWkpj-7U0M)
+
+^Video Showcase^
 
 Our game also needed a Fog of War, wich we implemented with a RenderTarget onto wich Each Squad's sergent Draws a transparent circular brush periodically.
 Each sergent fires a Line trace on a Plane under the map to get the UV coordinates onto which to draw.
@@ -49,6 +52,7 @@ This render Target is then sampled by a Decal Actor that covers the whole map.
 
 As for the Ennemy units they periodicaly query the Render Target at their corresponding UV coordinates to know if they are in the Fog of War.
 This allows us to hide Unit Meshes and animation as well as interactive behaviour if they are in the Fog Of War which allows us to gain a bit of performance.
+( The query is done Asyncronously as the basic Syncronous function is quite expensive )
 
 <img width="600" alt="Fog of War Query Representation" src="https://github.com/user-attachments/assets/215993c9-cbdb-4621-9292-cb76fdcfb00c" />
 
