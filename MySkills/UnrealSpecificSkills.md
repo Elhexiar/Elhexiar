@@ -40,9 +40,9 @@ Overall we have a lot of different systems that need to communicate with one ano
 To help minimise the effect on performance of the behaviour trees we try to use as much Events as possible and keep the overhead to a minimum.
 
 
-[![RTS Fight](https://img.youtube.com/vi/4p4HSr-GatU.jpg)](https://www.youtube.com/watch?v=4p4HSr-GatU)
 
-https://youtu.be/4p4HSr-GatU
+
+[![RTS Fight](https://img.youtube.com/vi/4p4HSr-GatU/0.jpg)](https://www.youtube.com/watch?v=4p4HSr-GatU)
 
 ### Fog of War
 
