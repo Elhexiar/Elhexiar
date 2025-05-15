@@ -113,3 +113,16 @@ void UAC_M_SquadUnitManager::StartAsyncTask()
 }
 ```
 
+## A complete rework very late in developement
+
+Our Game had a lot of problems only 2 month before the deadline, we couldn't figure out how to make interesting Levels for our RTS and had a lot of struglles tweaking the Units metrics to have something interesting and satisfying.
+After a lot of tries we ended up ditching the RTS aspect as it would have probably needed too much work and experimentation to end up at a satisfying result.
+We switched to a game more similar to an AutoBattler were the Player spawned its units on a Nodal Map, and the Unit would then Handle movement o their own according to the Nodes settings.
+
+Because of the way i Designed the sytems the transition from ne type of gameplay to another was pretty seamless, I could reuse my Squad COmmand and movement systems without having to change anything, i just had the nodes give Units new instruction in thei SquadCommandQueue when they collide.
+
+Same story with the other systems, since i abstracted a lot of things and kept it as modal as possible, we could change our gameplay quite dramatically with only minor tweaks. It helped us greatly in prototyping and saved me a lot of time wich I could then use to improve Game Feel and UX.
+
+
+
+
