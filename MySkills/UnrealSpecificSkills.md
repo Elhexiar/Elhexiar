@@ -87,6 +87,8 @@ Each **Card** is made of OnExecution(), OnFinish() and potentially OnTick(). But
 This would prove quite useful for integrating, SFX/VFX.
 Combined with already made versatile utility functions it allowed out Designers and Tech Artist to experiment with the system and be more creative all while not needing to have a programmer involved since it would not affect the broader codebase.
 
+For example I later expanded the system to create a Tooltip when hover is held for a given type, i further enhanced it by allowing any Card Effect to hold TooltipWidgets, when contructing the card the CardToolTipWidget iterates through all the card effect to query them for TooltipWidgets to construct the CardToolTipWidget.
+
 
 
 ## Optimisation 
