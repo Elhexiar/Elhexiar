@@ -1,4 +1,6 @@
 # Bienvenue sur mon profil !
+###[ENGLISH VERSION](README.md) 
+
 
 ![Banner](https://github.com/user-attachments/assets/100a186f-bab9-4cc1-bff1-03c566535aa3)
 
