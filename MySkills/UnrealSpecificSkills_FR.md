@@ -1,45 +1,43 @@
-# My Unreal Engine skills
+# Mes compétences Unreal Engine
 
-I first started to experiment with Unreal Engine as a Level Editor for Unreal Tournament 4 with the goal of making maps to play with friends and teachers.
-I then started to experiment with its programming aspect in my free time during my studies as most of our first years was done on either Unity or WebEngines.
+J'ai commencé à expérimenter Unreal Engine en tant qu'éditeur de niveau pour Unreal Tournament 4 dans le but de créer des cartes pour jouer avec mes amis et mes professeurs.
+J'ai ensuite commencé à expérimenter l'aspect programmation pendant mon temps libre au cours de mes études, car la plupart de nos premières années ont été faites sur Unity ou Phaser.
 
-## Final Year Project
+## Projet de fin d'études
 
-During the concept selection my concept was selected on the condition that I fuse it with another student's concept.
-After our Concept was properly selected as one of the Final Year Project Concept, i handed over the Game design aspect to a colleague that could handle this aspect full time for the rest of developement.
-Meanwhile I focused on the Tech aspect of the project and importantly the R&D.
-We eventualy chose to go for Unreal, One of the reason was a desire from myself and a lot of member of the team to branch out of unity learn how to make games no matter the engine.
+Lors de la sélection des concepts, mon concept a été sélectionné à la condition que je le fusionne avec celui d'une autre étudiante.
+Après que notre concept ait été sélectionné comme l'un des concepts du projet de fin d'études, j'ai confié la conception du jeu à un collègue qui pouvait s'occuper de cet aspect à plein temps pour le reste du développement.
+Pendant ce temps, je me suis concentré sur l'aspect technique du projet et surtout sur la recherche et le développement.
+Nous avons finalement choisi d'opter pour Unreal, l'une des raisons étant mon désir et celui de nombreux membres de l'équipe de sortir du cadre d'Unity et d'apprendre à créer des jeux peux importe le moteur.
 
-Our game Being an ***RTS with Card Game Element*** is System heavy, which needed a well planned architecture phase and a lot of re-evaluation phase.
-I decided to focus on being a ***Systems Programmer*** and ***Gameplay Programmer***, delegating The UI Programming and some of the Tooling.
+Notre jeu étant un ***RTS avec des éléments de jeu de cartes*** était lourd en système, ce qui a nécessité une phase d'architecture bien planifiée et beaucoup de phases de réévaluation.
+J'ai décidé de me concentrer sur le rôle de ***Programmeur système*** et ***Programmeur Gameplay***, en déléguant la programmation de l'interface utilisateur et une partie de l'outillage.
 
 
-I will do my best to try and explain some of the systems I come up with for our game !
+Je vais faire de mon mieux pour essayer d'expliquer certains des systèmes que j'ai designé pour notre jeu !
 
 # RTS
 
-The Game Being an ***RTS*** had to have some though put into how we would handle the Units, furthermore our Game Designers wanted a ***Squad System*** which needed to be taken into account
+Le jeu étant un ***RTS***, il fallait réfléchir à la façon dont nous allions gérer les unités. De plus, nos Game Designers voulaient un ***Système d'escouade*** qui devait être pris en compte.
 
-### Basic Hierarchy
+### Hiérarchie de base
 
 <img width="596" alt="BasicHierarchy" src="https://github.com/user-attachments/assets/906bb0f1-37e1-48b8-9cdb-e3c3b604d63f" />
 
-Each **Squad** is made of a Squad Object that will handle, Initialisation from a DA (which includes spawning Units), Squad Wide Orders, Squad Spacing.
-it contains a list of all the Unit It spawnned durring its initialisation phase.
-It also contains a Command Queue and a behaviour tree to handle Squad Wide Behaviour such as Aggro of surrounding squad and coordination between all units.
+Chaque **Squad** est composé d'un objet Squad qui va gérer l'initialisation à partir d'un DA (ce qui inclut le spawn d'unités), les ordres à l'échelle de l'escouade, l'espacement de l'escouade.
+il contient une liste de toutes les unités qu'il a engendrées pendant sa phase d'initialisation.
+Il contient également une file d'attente de commandes et un Behaviour Tree pour gérer le comportement de l'ensemble du groupe, comme l'aggro de l'escouade et la coordination entre toutes les unités.
 
-Each **Unit** Is spawned by the squad and also contains a Behaviour tree and a Command Queue that is used to coordinates with Squad Wide Commands. it contains a Movement Component that handles the movement logic, for Performance concerns we use a mix of the Floating Pawn Movement Component and snapping the Units to the Navmesh since we dont need to directly simulate physics/gravity for each of our units.
-The unit closest to the Squad position average is selected to become its **Sergent**, wich handles, Squad Wide Aggro Collision, Fog of War Update, it also tunes the other units velocities to be in sync with the sergent and have more coherent squad wide movements.
-If a Sergent Dies the closest unit becomes sergent.
+Chaque **Unité** est engendrée par l'escouade et contient également un Behaviour Tree et une file d'attente de commandes qui est utilisée pour coordonner les commandes de l'ensemble de l'escouade. Elle contient un composant de mouvement qui gère la logique de mouvement, pour des raisons de performance, nous utilisons un mélange du composant de mouvement Floating Pawn et de l'accrochage des unités au Navmesh puisque nous n'avons pas besoin de simuler directement la physique/gravité pour chacune de nos unités.
+L'unité la plus proche de la position moyenne de l'escouade est sélectionnée pour devenir son **Sergent**, ce qui gère les collisions Aggro à l'échelle de l'escouade, les mises à jour du brouillard de guerre, ainsi que les vitesses des autres unités pour qu'elles soient synchronisées avec le Sergent et que les mouvements à l'échelle de l'escouade soient plus cohérents.
+Si un sergent meurt, l'unité la plus proche devient sergent.
 
-The **Units** Are spawned according to a **Formation** Struct given by the Squad Data Asset that contains all the informations to spawn the Units, including a 2D array of unit types and stats.
+Les **Unités** sont créées en fonction d'une **Structure de formation** donnée par la ressource de données de l'escouade qui contient toutes les informations nécessaires à la création des unités, y compris un tableau 2D des types d'unités et leurs statistiques.
 
 <img width="350" alt="grid" src="https://github.com/user-attachments/assets/126fce57-8b8d-4cb6-9acf-f1356a5fa2d7" />
 
-Overall we have a lot of different systems that need to communicate with one another, we also have a lot of abstraction because of the Behaviour tree and Command Systems for both **Units** and **Squad**.
-To help minimise the effect on performance of the behaviour trees we try to use as much Events as possible and keep the overhead to a minimum.
-
-
+Nous avons beaucoup de systèmes différents qui doivent communiquer les uns avec les autres, nous avons également beaucoup d'abstraction avec les Behaviour Tree et les systèmes de commande pour les **Unités** et les **Equipes**.
+Pour minimiser l'effet des Behaviour Tree sur les performances, nous essayons d'utiliser autant d'event que possible afin de réduire l'impact potentiel sur les performances.
 
 
 [![RTS Fight](https://img.youtube.com/vi/4p4HSr-GatU/0.jpg)](https://www.youtube.com/watch?v=4p4HSr-GatU)
@@ -49,45 +47,42 @@ To help minimise the effect on performance of the behaviour trees we try to use 
 
 [![Fog Of War Showcase Video](https://img.youtube.com/vi/UsWkpj-7U0M/0.jpg)](https://www.youtube.com/watch?v=UsWkpj-7U0M)
 
-^Video Showcase^
+Notre jeu avait également besoin à un moment donné d'un brouillard de guerre, que nous avons implémenté avec un RenderTarget sur lequel le sergent de chaque escouade dessine périodiquement une brush circulaire transparente.
+Chaque sergent ray trace periodiquement sur un plan sous la carte pour obtenir les coordonnées UV sur lesquelles dessiner.
+Cette RenderTarget est ensuite sample par un Decal Actor qui couvre toute la carte.
 
-Our game also needed a Fog of War, wich we implemented with a RenderTarget onto wich Each Squad's sergent Draws a transparent circular brush periodically.
-Each sergent fires a Line trace on a Plane under the map to get the UV coordinates onto which to draw.
-This render Target is then sampled by a Decal Actor that covers the whole map.
-
-As for the Ennemy units they periodicaly query the Render Target at their corresponding UV coordinates to know if they are in the Fog of War.
-This allows us to hide Unit Meshes and animation as well as interactive behaviour if they are in the Fog Of War which allows us to gain a bit of performance.
-( The query is done Asyncronously as the basic Syncronous function is quite expensive )
+Quant aux unités ennemies, elles querry périodiquement la RenderTarget à leurs coordonnées UV correspondantes pour savoir si elles sont dans le brouillard de guerre.
+Cela nous permet de cacher les maillages et les animations des unités ainsi que le comportement interactif si elles sont dans le brouillard de guerre, ce qui nous permet de gagner un peu en performance.
+( Les Querry sont faits de manière asynchrone car la fonction synchrone de base est assez coûteux ).
 
 <img width="600" alt="Fog of War Query Representation" src="https://github.com/user-attachments/assets/215993c9-cbdb-4621-9292-cb76fdcfb00c" />
 
 
-(In Testing this system was also able to make an accurate Minimap, but this feature was cut from the game)
+(Lors des tests, ce système légèrement altéré permettait également de créer une Minimap précise, mais cette fonctionnalité a été supprimée du jeu).
 
-## Card System
+## Système de cartes
 
 ![Card](https://github.com/user-attachments/assets/5d2df46a-7566-4b99-9ff1-1abc68c6d55a)
 
 
-When I designed the card system, the precise role and behaviour of the cards had yet to be fully designed.
-I opted to make a the Card System very modular so that any changes could quicly be added, and to allow our GDs to churn out New Cards as fast as possible in later production and testing phases.
+Lorsque j'ai conçu le système de cartes, le rôle et le comportement précis des cartes n'avaient pas encore été entièrement définis.
+J'ai opté pour un système de cartes très modulaire afin que tout changement puisse être rapidement ajouté, et pour permettre à nos GD de produire de nouvelles cartes aussi vite que possible dans les phases ultérieures de production et de test.
 
-The card would be containers for a few List of Card Effects that would trigger on certain Events ( OnDraw(), OnPlay(), OnDiscard etc... )
-By doing this our Game Designer would be able to make any effect happen at any corresponding Trigger.
-
+Les cartes seraient des conteneurs pour des listes d'effets de cartes qui se déclencheraient lors de certains événements ( OnDraw(), OnPlay(), OnDiscard etc... ).
+En faisant cela, notre Game Designer serait capable de faire en sorte que n'importe quel effet se produise à n'importe quel déclencheur correspondant.
 
 <img width="600" alt="Fog of War Query Representation" src="https://github.com/user-attachments/assets/e4099d20-2b52-4961-984f-d2220f7fff98" />
 <img width="400" alt="Fog of War Query Representation" src="https://github.com/user-attachments/assets/3b386482-9d05-424d-8e6a-165bee03e4ca" />
 
 
-Each **Card** is made of OnExecution(), OnFinish() and potentially OnTick(). But it also contains a Condtition() Method that is called first, first the Card goes through every Card Effect of a SelectedList and Comfirms every conditions. if all are comfirmed it then Executes its ExecutionMethods.
+Chaque **Carte** est composée de OnExecution(), OnFinish() et éventuellement OnTick(). Mais elle contient également une méthode Condition() qui est appelée en premier, d'abord la carte passe en revue chaque effet de carte d'une liste sélectionnée et confirme toutes les conditions. Si toutes sont confirmées, elle exécute alors ses méthodes d'exécution.
 
 ![CardEffectCallOrder](https://github.com/user-attachments/assets/7822cb96-b927-42bf-8d3d-82926d88e267)
 
-This would prove quite useful for integrating, SFX/VFX.
-Combined with already made versatile utility functions it allowed out Designers and Tech Artist to experiment with the system and be more creative all while not needing to have a programmer involved since it would not affect the broader codebase.
+Cela s'est avéré très utile pour l'intégration des SFX/VFX.
+Combiné avec les fonctions utilitaires polyvalentes déjà existantes, cela a permis aux Game Designers et aux Tech Artist d'expérimenter avec le système et d'être plus créatifs, tout en n'ayant pas besoin de faire appel à un programmeur puisque leurs modifications n'affecterait pas la code base.
 
-For example I later expanded the system to create a Tooltip when hover is held for a given type, i further enhanced it by allowing any Card Effect to hold TooltipWidgets, when contructing the card the CardToolTipWidget iterates through all the card effect to query them for TooltipWidgets to construct the CardToolTipWidget.
+Par exemple, j'ai ensuite étendu le système pour créer une infobulle lorsqu'un type donné est survolé, je l'ai encore amélioré en permettant à n'importe quel effet de carte de contenir des TooltipWidgets, lors de la construction de la carte, le CardToolTipWidget itère à travers tous les effets de carte pour leur demander des TooltipWidgets afin de construire le CardToolTipWidget.
 
 
 
@@ -113,15 +108,15 @@ void UAC_M_SquadUnitManager::StartAsyncTask()
 }
 ```
 
-## A complete rework very late in developement
+## Une refonte complète très tard dans le développement
 
-Our Game had a lot of problems only 2 month before the deadline, we couldn't figure out how to make interesting Levels for our RTS and had a lot of struglles tweaking the Units metrics to have something interesting and satisfying.
-After a lot of tries we ended up ditching the RTS aspect as it would have probably needed too much work and experimentation to end up at a satisfying result.
-We switched to a game more similar to an AutoBattler were the Player spawned its units on a Nodal Map, and the Unit would then Handle movement o their own according to the Nodes settings.
+Notre jeu a eu beaucoup de problèmes seulement 2 mois avant la date limite, nous n'arrivions pas à trouver comment faire des niveaux intéressants pour notre RTS et nous avons eu beaucoup de mal à ajuster les métriques des unités pour avoir quelque chose d'intéressant et de satisfaisant.
+Après de nombreuses tentatives, nous avons fini par abandonner l'aspect RTS car il aurait probablement nécessité trop de travail et d'expérimentation pour aboutir à un résultat satisfaisant nottement au niveau du LD.
+Nous avons opté pour un jeu plus proche d'un AutoBattler où le joueur fait apparaître ses unités sur une carte nodale, et où les unités gèrent elles-mêmes leur mouvement en fonction des paramètres des Nodes
 
-Because of the way i Designed the sytems the transition from ne type of gameplay to another was pretty seamless, I could reuse my Squad COmmand and movement systems without having to change anything, i just had the nodes give Units new instruction in thei SquadCommandQueue when they collide.
+Grâce à la façon dont j'ai conçu les systèmes, la transition d'un type de jeu à l'autre s'est faite sans problème. J'ai pu réutiliser mes systèmes de commande d'escouade et de mouvement sans avoir à changer quoi que ce soit, j'ai juste fait en sorte que les Nodes donnent aux unités de nouvelles instructions dans leur SquadCommandQueue lorsqu'elles entrent en collision.
 
-Same story with the other systems, since i abstracted a lot of things and kept it as modal as possible, we could change our gameplay quite dramatically with only minor tweaks. It helped us greatly in prototyping and saved me a lot of time wich I could then use to improve Game Feel and UX.
+C'est la même chose pour les autres systèmes, puisque j'ai abstrait beaucoup de choses et que je les ai gardées aussi modales que possible, nous avons pu changer notre gameplay de façon assez spectaculaire avec seulement des modifications mineures. Cela nous a beaucoup aidé dans le prototypage et m'a fait gagner beaucoup de temps que j'ai pu utiliser pour améliorer le Game Feel et l'UX (Cette derniere est encore insuffisante pour un projet complet mais pour 3 semaine combiné au debugging reste une fierté).
 
 
 
