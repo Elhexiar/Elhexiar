@@ -1,88 +1,78 @@
 # IN CONSTRUCTION
 
-# Hard Skills
+# Compétences techniques
 
-## Engine and software flexibility
+## Flexibilité sur moteurs et logiciels
 
-During my studies as well as my own  game dev journey, i have experienced a multitude of Game Engines and Softwares.
-In each one i focus on understanding the systems and principle behind all of them so that i can more easily transition to other similar software if need be.
-For engine I have experience in :
+Au cours de mes études et de mon parcours de développeur de jeux, j'ai expérimenté une multitude de moteurs et de logiciels de jeux.
+Pour chacun d'entre eux, je m'efforce de comprendre les systèmes et les principes sous-jacents afin de pouvoir passer plus facilement à d'autres logiciels similaires si nécessaire.
+En ce qui concerne les moteurs, j'ai de l'expérience en :
 - Unreal Engine 5 (BP & C++)
 - Unity (C#)
 - Godot (GDscript & C++)
 - Phaser (Javascript, HTML5, CSS)
 - Ren'Py (Python)
 
-I mainly focus on using Unreal and Unity, but i know that a lot of studios have their own propriatry Engine, I'm certain that my will to learn and pattern recognition would greatly help me adapt rapidly to a new engine.
+Je me concentre principalement sur l'utilisation d'Unreal et d'Unity, mais je sais que beaucoup de studios ont leur propre moteur, je suis certain que ma volonté d'apprendre et mes experiences sur plusieur moteurs m'aideront grandement à m'adapter rapidement à un nouveau moteur.
 
-## Knowledge of a wide array of Game Dev Domains
+## Connaissance d'un large éventail de domaines du développement de jeux vidéo
 
-Being taught in a Game Dev School has given me the opportunity to both try and work with a lot of different Game Dev domains.
-I always tried to rigorously learn as mush as i could about each of this domains, and have hands on experience.
-As such is have experience in :
+Etudier dans une école de développement de jeux m'a donné l'opportunité d'essayer et de travailler avec un grand nombre de domaines de développement de jeux différents.
+J'ai toujours cherché à en apprendre le plus possible sur chacun de ces domaines, et à avoir une expérience pratique.
+Ainsi, j'ai de l'expérience en :
 - Game Design
 - Level Design
-- 3D Modeling (Environement Art, UV Unwrapping, Rigging, Animation, both Blender and Maya)
-- Tech Art (Mainly Shader (Nodal and HLSL) in Unreal and Unity)
-- 2D art (Pixel Art, Concept Art, Artistic Direction)
-- Naration (Narrative Structure, WorldBuilding)
+- Modélisation 3D (Environnement Art, UV Unwrapping, Rigging, Animation, à la fois sur Blender et Maya)
+- Tech Art (principalement Shader (Nodal et HLSL) dans Unreal et Unity)
+- Art 2D (Pixel Art, Concept Art, Direction artistique)
+- Narration (structure narrative, World Building)
 
-## Technical Knowlege in Electronics
+## Connaissances techniques en électronique
 
-Prior to my Game Dev studies I was in the Electronics Engineering field following a 2 year University Degree.
-As such have done internship in a Medical Lab LTSI Rennes as a Data Analyst.
-I have also been a Technician In Avionics Electronic at Sabena Technics for multiple small contracts accross the years
-These experience as a technician, helped me understand how to combine rigor with flexibility in my work.
+Avant mes études de concéption jeux video, j'ai travaillé dans le domaine de l'électronique industrielle après un DUT GEII.
+A ce titre, j'ai effectué un stage dans un laboratoire médical le labo LTSI Rennes en tant qu'analyste de données.
+J'ai également été technicien en électronique avionique chez Sabena Technics pour de multiples petits contrats au fil des années.
+Ces expériences en tant que technicien m'ont permis de comprendre comment combiner rigueur et flexibilité dans mon travail.
 
 <!--
  ![logoLTSI_small](https://github.com/user-attachments/assets/95d07af8-8165-4940-8d85-4142509c7505)
 // ![Sabena-Site-Web](https://github.com/user-attachments/assets/68eb9630-2ce4-40f1-8d20-6eed8e35c191)
 -->
 
-# Language
+# Langue
 
-I am native to France and therfore have a *Navite level in French*.
-Furthermore I am *fluent in English* as this document and any conversation we could have can attest.
-I do all my work entirely in English unless required otherwise.
+Je parle couramment l'anglais avec un score de 970 au TOEIC en sortie d'IUT
+Je fais tout mon travail entièrement en anglais, sauf demande contraire.
 
-I am also currently learning Spanish.
+Je suis également en train de réapprendre l'espagnol.
 
-# Soft Skills
+# Compétences
 
-## Will to learn new skills, systems and software
+## Volonté d'apprendre de nouvelles compétences, de nouveaux systèmes et de nouveaux logiciels
 
-I always had a very curious nature in a wide array of domains, although i now tend to focus my curiosity on the Game Dev Field I still like to learn a lot from otherwise completely unrealated topics and domains.
+J'ai toujours eu une nature très curieuse dans un large éventail de domaines, bien que j'ai maintenant tendance à concentrer ma curiosité sur le domaine du développement de jeux, j'aime toujours apprendre beaucoup de choses sur des sujets et des domaines que je n'ai jamais abordés auparavant.
 
-This has helped me in my work adapt more easily to new systems, software and Engine. I am absolutely not afraid to change my habits and always enthusiastic about learning new software and/or Pipeline.
+Cela m'a aidé dans mon travail à m'adapter plus facilement à de nouveaux systèmes, logiciels et moteurs. Je n'ai absolument pas peur de changer mes habitudes et je suis toujours enthousiaste à l'idée d'apprendre de nouveaux logiciels et/ou pipeline.
 
-## Rigorous
-
-I was not born rigorous, it was something i had to counciously work toward and in wich i now take pride. I like to have an organised workspace and workflow.
-I regularly  review my own work to either catch errors, or find better and more efficient ways to do things.
-I also always keep in mind the fact that others have to easily understand my work as i have always lived according to the saying
-"Do as you would like others to do"
-
-## Team Player
+## Joueur d'équipe
 
 **TODO REFACTOR**
-During my 3 year degree a huge majority of my work was done in groups in which i had to assume different roles everytime.
-I understand the dynamics of groups work and how to integrate myself or help other similar to me integrate better.
-Having worked with a lot of different people specialized in diferent works, i can understand what they do, and how to make anyone understand my work.
-I have experience in being led and leading people, which helps me understand better the different perspective and dynamics of teamwork.
+Au cours de mes trois années d'études, la majeure partie de mon travail s'est déroulée en groupe et j'ai dû assumer des rôles différents à chaque fois.
+Je comprends la dynamique du travail en groupe et comment m'intégrer ou aider d'autres personnes semblables à moi à mieux s'intégrer.
+Ayant travaillé avec un grand nombre de personnes spécialisées dans différents domaines, je peux comprendre ce qu'elles font et comment faire en sorte qu'elles comprennent mon travail.
+J'ai l'expérience d'être dirigé et de diriger des personnes, ce qui m'aide à mieux comprendre les différentes perspectives et dynamiques du travail d'équipe.
 
-## Creativity
+## Créativité
 
-Despite choosing a really carthesian path, i pride myself in having a lot of creativity.
-I specificaly chose Game Dev because it was a way to display my programming skills in an artistic field ( obviously also because of my underlying passion for Video Game )
-I still draw and practice music, especially Singing and Piano which i practice since childhood.
+Bien que j'aie choisi une voie très carthésienne, je suis fier d'avoir beaucoup de créativité.
+J'ai spécifiquement choisi la conception de jeux vidéo parce que c'était un moyen de montrer mes compétences en programmation dans un domaine artistique ( évidemment aussi à cause de ma passion sous-jacente pour les jeux vidéo )
+Je continue à dessiner et à pratiquer la musique, en particulier le chant et le piano, que je pratique depuis l'enfance.
 
-## Unwavering Passion for Video Games
+## Une passion inébranlable pour les jeux vidéo
 
-As far as i can recall I was always passionate about Video Games, but quickly it became more than a simple way to have fun and spend time with friend.
-It became a medium through wich i experienced new emotions and stories far more impactfull than in cinema or books.
-I quickly got passionate about the underlying processes and history behind my favorite games, listening through Post Mortem conference, and GDC talks.
-disecting game mechanics narration and designs.
-This Techical and Artistic approach to video games quicly superceded my more casual enjoyment of the medium and drasticaly changed the way i consumed Video Games.
-I now make a point to try and explore as much as i can of the vast landscape that video games can offer, and dont think i will ever be able to quench my thirst for interesting game experience !
-
-
+Aussi loin que je me souvienne, j'ai toujours été passionné par les jeux vidéo, mais rapidement c'est devenu plus qu'un simple moyen de s'amuser et de passer du temps avec ses amis.
+C'est devenu un moyen d'expérimenter de nouvelles émotions et des histoires bien plus percutantes qu'au cinéma ou dans les livres.
+Je me suis rapidement passionné pour les processus sous-jacents et l'histoire de mes jeux préférés, en écoutant les conférences Post Mortem et les exposés de la GDC (
+) qui analysent les mécanismes de jeu, la narration et les conceptions.
+Cette approche technique et artistique des jeux vidéo a rapidement pris le pas sur mon plaisir de joueur et a radicalement changé ma façon de consommer les jeux vidéo.
+Aujourd'hui, je m'efforce d'explorer autant que possible le vaste paysage que les jeux vidéo peuvent offrir, et je ne pense pas que je pourrai jamais étancher ma soif d'expériences de jeu intéressantes !
