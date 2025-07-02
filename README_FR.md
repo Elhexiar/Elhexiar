@@ -2,43 +2,43 @@
 
 ![Banner](https://github.com/user-attachments/assets/100a186f-bab9-4cc1-bff1-03c566535aa3)
 
-## I'm Mathis MIRIEL
+## Mathis MIRIEL
 
-I'm a ***Game Programmer*** student finishing my third year at ESMA Rennes, France.
-I am also currently looking for either an entry job or an internship.
+Je suis un ***Programmeur Gameplay***  venant de terminer sa troisième année à l'ESMA de Rennes, France.
+Je suis actuellement à la recherche d'un emploi junior ou d'un stage.
 
-I was always pationate about video games, and have always dreamed of being part of this industry.
-After getting a DUT (two years university degree) in Industrial Electronics, I finaly decided to follow my dream and dedicate my effort fully in becoming a Game Dev.
+J'ai toujours été passionné par les jeux vidéo, et j'ai toujours rêvé de faire partie de cette industrie.
+Après avoir obtenu un DUT en électronique industrielle, j'ai finalement décidé de poursuivre mon rêve et de me consacrer pleinement au métier de Game Dev.
 
-I then enroled in ESMA Rennes, while continuing in my free time to explore new skills.
-I have experience in :
+Je me suis donc inscrit à l'ESMA de Rennes, tout en continuant à explorer de nouvelles compétences pendant mon temps libre.
+J'ai de l'expérience en :
 
-- Unreal (BPs and C++)
+- Unreal (BPs et C++)
 - Unity
-- WebGames (notably Phaser)
+- WebGames (notamment Phaser)
 
-I also have experience in python from working as an intern Data Analyst for LTSI Rennes.
+J'ai également de l'expérience en python après avoir travaillé en tant que stagiaire Data Analyst pour le labo LTSI Rennes.
 
-I have experience in **Systems Programming, Gameplay Programming and Tooling**, I also have experience of numerous Unreal Engine Systems and am ready and eager to adapt to any new systems or software thrown at me !
+J'ai de l'expérience en **programmation de systèmes, programmation de gameplay et d'outils**, j'ai également de l'expérience dans de nombreux systèmes Unreal Engine et je suis prêt et impatient a m'adapter à tous les nouveaux systèmes ou logiciels sur lesquels je pourrais me retrouver !
 
-I also put a great emphasis on understanding as much as i can about the different Game Dev Crafts outside of my area of expertise.
-I Know the fundamentals in 3D Art (Maya/Blender), 2D Art(Photoshop), Animation (Blender) and especially Level and Game Design on which i still regularly try to improve.
+Je mets également l'accent sur la compréhension des différents métiers du développement de jeux en dehors de mon domaine d'expertise.
+Je connais les bases de l'art 3D (Maya/Blender), de l'art 2D (Photoshop/GIMP), de l'animation (Blender) et surtout du level et du game design que j'essaie encore régulièrement d'améliorer.
 
-This appetite for knowledge and creativity is also present in my hobbies outside of Game Dev such as Music and especially piano which i practice since my childhood.
+Cet appétit pour la connaissance et la créativité est également présent dans mes hobbies en dehors du Game Dev comme la Musique et plus particulièrement le piano que je pratique depuis mon enfance.
 
-If you would like to know more about me you can follow the links below :
+Si vous souhaitez en savoir plus sur moi, vous pouvez suivre les liens ci-dessous :
 
-## Useful Links
+## Liens utiles
 
-[My overall skills](MySkills/MyOverallSkills.md) 
+[Compétences Générales](MySkills/MyOverallSkills_FR.md) 
 
-[My Unreal Engine skills](MySkills/UnrealSpecificSkills.md) 
+[Compétence Unreal Engine](MySkills/UnrealSpecificSkills_FR.md) 
 
-[My Unity Skills](MySkills/UnitySpecifSkills.md) 
+[Compétence Unity](MySkills/UnitySpecifSkills_FR.md) 
 
-[French CV](MySkills/FrenchCV.md) 
+[CV_Français](MySkills/FrenchCV.md) 
 
-[English CV](MySkills/EnglishCV.md)
+[CV_Anglais](MySkills/EnglishCV.md)
 
 <!--
 **Elhexiar/Elhexiar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
