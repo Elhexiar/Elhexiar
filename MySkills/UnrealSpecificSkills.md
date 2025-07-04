@@ -16,6 +16,9 @@ I decided to focus on being a ***Systems Programmer*** and ***Gameplay Programme
 
 I will do my best to try and explain some of the systems I come up with for our game !
 
+( The project is too heavy for a github repo, as such we keep it localy on our nas, if you hant to have a copy of the whole project and are not scared of links )
+
+
 # RTS
 
 The Game Being an ***RTS*** had to have some though put into how we would handle the Units, furthermore our Game Designers wanted a ***Squad System*** which needed to be taken into account
@@ -123,6 +126,7 @@ Because of the way i Designed the sytems the transition from ne type of gameplay
 
 Same story with the other systems, since i abstracted a lot of things and kept it as modal as possible, we could change our gameplay quite dramatically with only minor tweaks. It helped us greatly in prototyping and saved me a lot of time wich I could then use to improve Game Feel and UX.
 
+DISCLAIMER : the last part of the projet have had to be rushed a lot, and as such code quality as suffered on the autobatller side of things
 
 
 
