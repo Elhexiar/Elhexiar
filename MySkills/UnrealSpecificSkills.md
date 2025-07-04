@@ -5,6 +5,8 @@ I then started to experiment with its programming aspect in my free time during 
 
 ## Final Year Project
 
+https://elhexiar.itch.io/maps-n-cards
+
 During the concept selection my concept was selected on the condition that I fuse it with another student's concept.
 After our Concept was properly selected as one of the Final Year Project Concept, i handed over the Game design aspect to a colleague that could handle this aspect full time for the rest of developement.
 Meanwhile I focused on the Tech aspect of the project and importantly the R&D.
