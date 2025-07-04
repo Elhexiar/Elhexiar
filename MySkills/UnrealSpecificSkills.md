@@ -13,7 +13,7 @@ Meanwhile I focused on the Tech aspect of the project and importantly the R&D.
 We eventualy chose to go for Unreal, One of the reason was a desire from myself and a lot of member of the team to branch out of unity learn how to make games no matter the engine.
 
 Our game Being an ***RTS with Card Game Element*** is System heavy, which needed a well planned architecture phase and a lot of re-evaluation phase.
-I decided to focus on being a ***Systems Programmer*** and ***Gameplay Programmer***, delegating The UI Programming and some of the Tooling.
+I decided to focus on being the sole ***Systems Programmer*** and ***Gameplay Programmer***, delegating only the UI Programming and some of the Tooling.
 
 
 I will do my best to try and explain some of the systems I come up with for our game !
