@@ -12,7 +12,6 @@ I handled :
 - Sound Design
 - UI and Inspect Menu
 - 1st Door, Computer, Lever&Light Puzzles
-- All the animations
+- All the animations which were either made with the animator or with interpolations and curves
 - Puzzle sync logic
-- All the animations were either made with the animator or with interpolations and curves
-- Basically everything except the camera rotation and the main table, and morse puzzle.
+- Basically everything except the camera rotation, the main table, and morse puzzle.
