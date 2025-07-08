@@ -5,7 +5,7 @@ https://claude-blanchet-babin.itch.io/no-hands-on-deck
 
 I handled :
 
-- Architecure
+- Architecture
 - Systems
 - Interactions
 - Collision
