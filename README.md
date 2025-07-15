@@ -1,6 +1,6 @@
 # Welcome to my profile !
 
-## Portfolio still under construction
+## ⚠ Portfolio still under construction ⚠
 
 ### [VERSION FRANCAISE](README_FR.md) 
 
